@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urvashi · PhD Researcher</title>
+<meta name="description" content="Urvashi: PhD researcher in Chemical Engineering (Energy Innovation) at Swansea University, working on sodium-ion solid-state electrolytes with DFT and experimental characterisation.">
+<meta property="og:title" content="Urvashi · PhD Researcher">
+<meta property="og:description" content="Sodium-ion solid-state electrolytes · DFT · Quantum computing · Swansea University">
+<meta property="og:image" content="photo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6fb; --surface:#ffffff; --surface-2:#f1effa; --text:#1d1b2e; --muted:#5d5a75; --line:#e4e1f0;
+  --accent:#6d3fe0; --accent-soft:#ede7fe; --accent-2:#0f9d8a; --chip:#f1effa; --shadow:0 1px 2px rgba(30,20,70,.05),0 8px 24px rgba(30,20,70,.06);
+  --hero-a:#0f0c29; --hero-b:#302b63; --hero-c:#24243e;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f0f17; --surface:#181826; --surface-2:#1f1f31; --text:#e6e4f5; --muted:#a19dbf; --line:#2c2a44;
+    --accent:#a78bfa; --accent-soft:#2a2350; --accent-2:#5eead4; --chip:#232238; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f0f17; --surface:#181826; --surface-2:#1f1f31; --text:#e6e4f5; --muted:#a19dbf; --line:#2c2a44;
+  --accent:#a78bfa; --accent-soft:#2a2350; --accent-2:#5eead4; --chip:#232238; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--hero-a),var(--hero-b) 55%,var(--hero-c));color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 -1px 0;height:60px;background:var(--bg);clip-path:ellipse(70% 100% at 50% 100%)}
+.hero .wrap{display:flex;gap:36px;align-items:center;padding-top:64px;padding-bottom:96px;position:relative;z-index:1}
+.photo{width:168px;height:168px;border-radius:50%;object-fit:cover;flex:none;border:4px solid rgba(255,255,255,.18);box-shadow:0 0 0 8px rgba(167,139,250,.18)}
+.hero h1{font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.05;margin:0 0 8px;font-weight:800;letter-spacing:-.02em}
+.hero .role{font-size:1.15rem;color:#ddd6fe;margin:0 0 6px;font-weight:500}
+.hero .place{color:#c4b5fd;margin:0 0 14px;font-size:.95rem}
+.prompt{font-size:.9rem;color:#9ece6a;margin-bottom:10px}
+.prompt span{color:#c0caf5}
+.cursor{display:inline-block;width:.55em;height:1.05em;background:#c0caf5;vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;font-weight:600;font-size:.92rem;border:1px solid rgba(255,255,255,.22);color:#fff;background:rgba(255,255,255,.08);transition:.15s}
+.btn:hover{background:rgba(255,255,255,.16);text-decoration:none;transform:translateY(-1px)}
+.btn.primary{background:#a78bfa;border-color:#a78bfa;color:#1a1338}
+.btn.primary:hover{background:#c4b5fd}
+.btn svg{width:17px;height:17px;flex:none}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;gap:4px;align-items:center;overflow-x:auto;padding-top:8px;padding-bottom:8px;scrollbar-width:none}
+nav.top a{color:var(--muted);font-weight:500;font-size:.9rem;padding:6px 10px;border-radius:8px;white-space:nowrap}
+nav.top a:hover{background:var(--surface-2);color:var(--text);text-decoration:none}
+.theme{margin-left:auto;background:var(--surface);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 10px;cursor:pointer;font:inherit;font-size:.85rem;flex:none}
+
+/* sections */
+main{padding:32px 0 56px}
+section{margin:0 0 44px;scroll-margin-top:70px}
+h2{font-size:1.35rem;margin:0 0 18px;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+h2::before{content:"";width:6px;height:22px;border-radius:3px;background:linear-gradient(var(--accent),var(--accent-2))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+.lead{font-size:1.07rem;color:var(--text);margin:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.stat b{display:block;font-size:1.45rem;color:var(--accent);line-height:1.2}
+.stat span{font-size:.8rem;color:var(--muted)}
+
+/* timeline */
+.tl{position:relative;padding-left:26px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.item{position:relative;margin-bottom:16px}
+.item::before{content:"";position:absolute;left:-26px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.item .head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.item h3{margin:0;font-size:1.05rem}
+.when{font-size:.82rem;color:var(--accent);font-weight:600;background:var(--accent-soft);padding:2px 10px;border-radius:999px;white-space:nowrap}
+.where{color:var(--muted);margin:2px 0 8px;font-size:.93rem}
+.item ul{margin:8px 0 0;padding-left:18px}
+.item li{margin:4px 0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{font-size:.78rem;background:var(--chip);border:1px solid var(--line);padding:2px 9px;border-radius:999px;color:var(--muted)}
+.badge{display:inline-block;font-size:.78rem;font-weight:700;color:#7a5200;background:#fde9b3;padding:2px 9px;border-radius:999px;margin-left:6px;vertical-align:2px}
+
+/* publications */
+.pubs{counter-reset:p;display:grid;gap:12px}
+.pub{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start}
+.pub::before{counter-increment:p;content:counter(p);font:600 .9rem "JetBrains Mono",monospace;color:var(--accent);background:var(--accent-soft);width:30px;height:30px;border-radius:8px;display:grid;place-items:center}
+.pub .t{font-weight:600;margin:0 0 4px}
+.pub .a{color:var(--muted);font-size:.92rem;margin:0}
+.pub .a b{color:var(--text)}
+.pub .j{font-size:.9rem;margin:6px 0 0}
+.pub .j i{color:var(--text)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.skills h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--chip);border:1px solid var(--line);padding:4px 11px;border-radius:8px;font-size:.88rem}
+
+/* awards */
+.awards{display:grid;gap:10px}
+.award{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:baseline}
+.award .y{font:600 .9rem "JetBrains Mono",monospace;color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.list{margin:0;padding:0;list-style:none}
+.list li{padding:8px 0;border-bottom:1px dashed var(--line);display:grid;grid-template-columns:52px 1fr;gap:10px}
+.list li:last-child{border-bottom:0}
+.list .y{font:600 .85rem "JetBrains Mono",monospace;color:var(--accent)}
+
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.project h3{margin:0 0 6px;font-size:1.02rem}
+.project p{margin:0 0 10px;color:var(--muted);font-size:.93rem}
+
+footer{border-top:1px solid var(--line);padding:24px 0 40px;color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media screen and (max-width:720px){
+  .hero .wrap{flex-direction:column;align-items:flex-start;padding-top:40px;padding-bottom:80px;gap:20px}
+  .photo{width:120px;height:120px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .skills,.grid2,.projects{grid-template-columns:1fr}
+  .card{padding:16px}
+}
+@media print{
+  @page{size:A4;margin:12mm 12mm}
+  nav.top,.actions,.theme,.hero::after,.prompt,.stats,#references{display:none!important}
+  html{font-size:10.5px}
+  body{background:#fff;color:#111;font-size:10.5px;line-height:1.45}
+  .wrap{max-width:none;padding:0}
+  .hero{background:none;color:#111;border-bottom:2px solid #6d3fe0;margin-bottom:10px}
+  .hero .wrap{padding:0 0 10px;gap:18px;flex-direction:row;align-items:center}
+  .photo{width:78px;height:78px;border:0;box-shadow:none}
+  .hero h1{font-size:26px;margin:0 0 2px}
+  .hero .role{color:#333;font-size:12px;margin:0}
+  .hero .place{color:#555;font-size:11px;margin:2px 0 0}
+  .print-contact{display:block!important;font-size:10.5px;color:#333;margin-top:4px}
+  main{padding:0}
+  section{margin:0 0 12px}
+  h2{font-size:13.5px;margin:0 0 6px}
+  h2::before{height:14px;width:4px}
+  .card,.stat{box-shadow:none;border:1px solid #ddd;padding:8px 10px;border-radius:8px;break-inside:avoid}
+  .lead{font-size:11px}
+  .tl{padding-left:18px}.tl::before{left:4px}
+  .item{margin-bottom:6px}.item::before{left:-18px;top:12px;width:9px;height:9px;border-width:2px}
+  .item h3{font-size:11.5px}.when{font-size:9.5px}.where{font-size:10px;margin:0 0 3px}
+  .item ul{margin:3px 0 0}.item li{margin:1px 0}
+  .tags{display:none}
+  .pubs{gap:6px}.pub::before{width:20px;height:20px;font-size:10px}
+  .skills{grid-template-columns:1fr 1fr!important;gap:6px}
+  .skills h3{font-size:9.5px;margin:0 0 4px}.chip{font-size:9.5px;padding:1px 6px}
+  .awards{gap:3px}.award{grid-template-columns:40px 1fr}
+  .grid2,.projects{grid-template-columns:1fr 1fr!important;gap:8px}
+  .list li{padding:3px 0;grid-template-columns:38px 1fr}
+  a{color:#4b22c8}
+  footer{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="photo" src="photo.jpg" alt="Photo of Urvashi">
+    <div>
+      <div class="prompt mono">urvashi@github <span>~ $ whoami</span><span class="cursor"></span></div>
+      <h1>Urvashi</h1>
+      <p class="role">PhD Researcher · Chemical Engineering &amp; Computational Modelling</p>
+      <p class="place">📍 Swansea University, United Kingdom</p>
+      <p class="print-contact" style="display:none">2598516@swansea.ac.uk · linkedin.com/in/urvashi-urvashi · github.com/Urru14 · ORCID 0009-0009-8799-0409 · urru14.github.io</p>
+      <div class="actions">
+        <a class="btn primary" href="CV_Urvashi.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14"/></svg>Download CV</a>
+        <a class="btn" href="mailto:2598516@swansea.ac.uk">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a>
+        <a class="btn" href="https://www.linkedin.com/in/urvashi-urvashi/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.5V21h-4v-5.7c0-1.36-.03-3.1-1.9-3.1-1.9 0-2.2 1.48-2.2 3V21H9z"/></svg>LinkedIn</a>
+        <a class="btn" href="https://github.com/Urru14" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+        <a class="btn" href="https://orcid.org/0009-0009-8799-0409" target="_blank" rel="noopener">ORCID</a>
+        <a class="btn" href="https://scholar.google.com/citations?user=A3PcYIsAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+        <a class="btn" href="https://www.scopus.com/inward/authorDetails.url?authorID=60637903800&amp;partnerID=MN8TOARS" target="_blank" rel="noopener">Scopus</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="top" aria-label="Sections">
+  <div class="wrap">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#publications">Publications</a>
+    <a href="#skills">Skills</a>
+    <a href="#awards">Awards</a>
+    <a href="#conferences">Conferences</a>
+    <a href="#projects">Projects</a>
+    <button class="theme" id="themeBtn" type="button" aria-label="Toggle colour theme">◐ Theme</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <p class="lead">PhD researcher combining <b>density functional theory</b>, <b>quantum simulation</b> and <b>experimental materials characterisation</b> to investigate energy-storage materials, with a focus on sodium-ion conducting solid-state electrolytes. Experienced with Quantum ESPRESSO, Qiskit and scientific Python, with a strong record of interdisciplinary collaboration and peer-reviewed research.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>3</b><span>Peer-reviewed papers</span></div>
+      <div class="stat"><b>9.96</b><span>MSc CGPA (out of 10)</span></div>
+      <div class="stat"><b>2×</b><span>Gold medals</span></div>
+      <div class="stat"><b>AIR 1</b><span>MSc entrance exam</span></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="tl">
+      <div class="item card">
+        <div class="head"><h3>PhD in Chemical Engineering (Energy Innovation)</h3><span class="when">Oct 2025 – Present</span></div>
+        <p class="where">Swansea University, United Kingdom</p>
+        <p style="margin:0">Advanced materials for energy storage and conversion, integrating atomistic modelling with experimental characterisation.</p>
+      </div>
+      <div class="item card">
+        <div class="head"><h3>MSc Physics <span class="badge">🥇 Gold Medalist</span></h3><span class="when">2022 – 2024</span></div>
+        <p class="where">University of Allahabad, India · CGPA 9.96/10</p>
+        <p style="margin:0">Specialisation: Laser and Spectroscopy.</p>
+      </div>
+      <div class="item card">
+        <div class="head"><h3>BSc in Mathematics, Physics and Chemistry</h3><span class="when">2019 – 2022</span></div>
+        <p class="where">University of Allahabad, India · 90.59%</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Research Experience</h2>
+    <div class="tl">
+      <div class="item card">
+        <div class="head"><h3>PhD Researcher</h3><span class="when">Oct 2025 – Present</span></div>
+        <p class="where">Swansea University, United Kingdom</p>
+        <ul>
+          <li>Investigating materials for energy storage and conversion through atomistic modelling and experimental characterisation.</li>
+          <li>Using density functional theory (DFT) to study electronic structure and materials properties.</li>
+          <li>Applying scientific programming and numerical methods to support computational materials research.</li>
+        </ul>
+        <div class="tags"><span class="tag">DFT</span><span class="tag">Quantum ESPRESSO</span><span class="tag">Na-ion electrolytes</span><span class="tag">HPC</span></div>
+      </div>
+      <div class="item card">
+        <div class="head"><h3>Junior Research Fellow</h3><span class="when">Jul 2024 – Aug 2025</span></div>
+        <p class="where">Department of Physics, Indian Institute of Technology Roorkee · Supervisor: Prof. P. C. Srivastava</p>
+        <ul>
+          <li>Investigated ground and excited states of <sup>18</sup>O and <sup>58</sup>Ni using variational quantum eigensolver methods for nuclear many-body systems.</li>
+          <li>Developed and tested workflows in Qiskit, Python and Fortran; mapped shell-model Hamiltonians to qubits using the Jordan–Wigner transformation.</li>
+          <li>Applied unitary coupled-cluster ansätze and benchmarked quantum results against conventional shell-model predictions for convergence and accuracy.</li>
+          <li>Completed advanced coursework in nuclear physics, numerical analysis, computational nuclear physics and quantum computing (CGPA 9.444/10).</li>
+        </ul>
+        <div class="tags"><span class="tag">Qiskit</span><span class="tag">VQE</span><span class="tag">UCC ansätze</span><span class="tag">Fortran</span><span class="tag">Nuclear shell model</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="pubs">
+      <div class="card pub"><div>
+        <p class="t">Melt Quenching Process for the Synthesis of Na<sub>5</sub>MSi<sub>4</sub>O<sub>12</sub>-Type Compounds, Sodium-Ion Conducting Solid Electrolytes</p>
+        <p class="a">A. Michalak, <b>Urvashi</b>, M. A. Reddy</p>
+        <p class="j"><i>ACS Omega</i> (2026) · <a href="https://doi.org/10.1021/acsomega.6c08181" target="_blank" rel="noopener">doi:10.1021/acsomega.6c08181</a></p>
+      </div></div>
+      <div class="card pub"><div>
+        <p class="t">Synthesis, structure, stability, and ionic conductivity of Na<sub>5</sub>MSi<sub>4</sub>O<sub>12</sub> type solid electrolytes for solid-state sodium batteries</p>
+        <p class="a">A. Michalak, <b>Urvashi</b>, T. O. Dunlop, O. Clemens, A. R. Munnangi</p>
+        <p class="j"><i>EES Batteries</i> (2026) · <a href="https://doi.org/10.1039/D6EB00059B" target="_blank" rel="noopener">doi:10.1039/D6EB00059B</a></p>
+      </div></div>
+      <div class="card pub"><div>
+        <p class="t">Emerging trends and structure–activity insights of Schiff base–lanthanide complexes as antibacterial agents</p>
+        <p class="a">S. Paswan, N. Jaiswal, <b>Urvashi</b>, A. Nath, M. Kumar, D. Mishra, N. Yadav</p>
+        <p class="j"><i>RSC Advances</i> 16 (2026), 3478–3508 · <a href="https://doi.org/10.1039/D5RA08181E" target="_blank" rel="noopener">doi:10.1039/D5RA08181E</a></p>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Expertise</h2>
+    <div class="skills">
+      <div class="card"><h3>Computational methods</h3><div class="chips">
+        <span class="chip">Density functional theory</span><span class="chip">Electronic structure</span><span class="chip">Phonons</span><span class="chip">CI-NEB</span><span class="chip">Quantum computing</span><span class="chip">Machine learning</span></div></div>
+      <div class="card"><h3>Programming</h3><div class="chips">
+        <span class="chip">Python</span><span class="chip">Qiskit</span><span class="chip">Fortran</span><span class="chip">C++</span><span class="chip">Bash / shell</span><span class="chip">Java</span></div></div>
+      <div class="card"><h3>Scientific software</h3><div class="chips">
+        <span class="chip">Quantum ESPRESSO</span><span class="chip">ORCA</span><span class="chip">NuShellX</span><span class="chip">Gnuplot</span><span class="chip">Origin</span><span class="chip">GaussView</span><span class="chip">Avogadro</span><span class="chip">SRIM</span><span class="chip">LaTeX</span></div></div>
+      <div class="card"><h3>Experimental methods</h3><div class="chips">
+        <span class="chip">XRD</span><span class="chip">XPS</span><span class="chip">Raman</span><span class="chip">SEM</span><span class="chip">Impedance spectroscopy</span><span class="chip">FTIR</span></div></div>
+      <div class="card" style="grid-column:1/-1"><h3>Productivity</h3><div class="chips">
+        <span class="chip">Git &amp; GitHub</span><span class="chip">Linux / HPC workflows</span><span class="chip">Excel</span><span class="chip">Word</span><span class="chip">PowerPoint</span></div></div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <h2>Awards &amp; Achievements</h2>
+    <div class="card awards">
+      <div class="award"><span class="y">2024</span><span><b>Ward Vidyant Memorial Gold Medal</b>, University of Allahabad, for outstanding academic performance</span></div>
+      <div class="award"><span class="y">2024</span><span><b>Ranjana and Hari Prakash Gold Medal</b>, for the highest marks in MSc Physics (2022–2024)</span></div>
+      <div class="award"><span class="y">2024</span><span><b>First in order of merit</b>, MSc Physics, University of Allahabad</span></div>
+      <div class="award"><span class="y">2024</span><span><b>MHRD fellowship</b> for PhD study as a GATE-qualified candidate</span></div>
+      <div class="award"><span class="y">2022</span><span><b>All India Rank 1</b>, MSc Physics entrance examination, University of Allahabad</span></div>
+      <div class="award"><span class="y">2022</span><span><b>IIT JAM</b> qualified</span></div>
+    </div>
+  </section>
+
+  <section id="conferences">
+    <div class="grid2">
+      <div>
+        <h2>Conferences &amp; Training</h2>
+        <div class="card"><ul class="list">
+          <li><span class="y">2025</span><span><a href="https://indico.ectstar.eu/event/250/" target="_blank" rel="noopener">DTP-TALENT Summer School: Quantum Computing for Nuclear Physics</a>, ECT*, Trento, Italy</span></li>
+          <li><span class="y">2025</span><span>Workshop on Quantum Technology, IIT Roorkee</span></li>
+          <li><span class="y">2024</span><span>68th DAE Symposium on Nuclear Physics, IIT Roorkee</span></li>
+          <li><span class="y">2023</span><span>Meghnad Saha Memorial International Conference on Frontiers of Physics, University of Allahabad</span></li>
+        </ul></div>
+      </div>
+      <div>
+        <h2>Languages</h2>
+        <div class="card"><ul class="list">
+          <li><span class="y">🇮🇳</span><span><b>Hindi</b>: native</span></li>
+          <li><span class="y">🇬🇧</span><span><b>English</b>: professional working proficiency (IELTS Academic, CEFR B2)</span></li>
+          <li><span class="y">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span><span><b>Welsh</b>: beginner</span></li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects &amp; Outreach</h2>
+    <div class="projects">
+      <div class="card project">
+        <h3>🧪 <a href="https://github.com/Urru14/lab-tools" target="_blank" rel="noopener">Lab Tools</a></h3>
+        <p>Streamlit app with calculators and notes for materials synthesis, XRD, spectroscopy, impedance and battery work.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span></div>
+      </div>
+      <div class="card project">
+        <h3>🎓 <a href="https://attackonscholar.com" target="_blank" rel="noopener">Attack on Scholar</a></h3>
+        <p>Co-founder. Tutorials and beginner-friendly lectures (like HPC) for early-career researchers, on the web and <a href="https://www.youtube.com/@AttackonScholar" target="_blank" rel="noopener">YouTube</a>.</p>
+        <div class="tags"><span class="tag">Teaching</span><span class="tag">Outreach</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="references">
+    <h2>References</h2>
+    <div class="card"><p style="margin:0">Academic references are available on request.</p></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Urvashi · Swansea, UK</span>
+    <span class="mono">built with ♥ on GitHub Pages</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var root=document.documentElement, btn=document.getElementById('themeBtn');
+    try{ var saved=localStorage.getItem('theme'); if(saved) root.setAttribute('data-theme',saved); }catch(e){}
+    btn.addEventListener('click',function(){
+      var cur=root.getAttribute('data-theme');
+      if(!cur){ cur=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'; }
+      var next=cur==='dark'?'light':'dark';
+      root.setAttribute('data-theme',next);
+      try{ localStorage.setItem('theme',next); }catch(e){}
+    });
+    document.getElementById('yr').textContent=new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
